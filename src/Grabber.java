@@ -56,6 +56,8 @@ public class Grabber {
 			printWriter = new PrintWriter(new BufferedWriter(new FileWriter(
 					file)));
 
+			printWriter.write("## Sent: " + m.getSentDate().toString());
+			
 			printWriter.write("## From:\n");
 			for (Address s : m.getFrom()) {
 				printWriter.write("* " + s.toString() + "\n");
